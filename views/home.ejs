@@ -1,0 +1,13 @@
+<%- include("partial/header.ejs"); -%>
+    <h1>Home</h1>
+    <p>
+      <%= homecontent%>
+      </p>
+    <%  posts_update.forEach(function(post){%>
+  <h1><%= post.title %></h1><br />
+ <p><%= post.content.slice(0,100)+"..." %>
+ <a href="/posts/<%=post.title%>">Read More</a>
+ </p>
+<% })%>
+
+<%- include("partial/footer.ejs"); -%>
